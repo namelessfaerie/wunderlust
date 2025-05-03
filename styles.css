@@ -1,0 +1,569 @@
+/* rae barrera in da house pray for me */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  style notes style notes for ref  */
+
+/* colors: #F6D64A, #55BCD5, #9B26B0, #499BD2, #222222, #EAEAEA, #FFFFFF */
+/* fonts: Molle (h1, h2, h3), Montserrat (h4, p, q, small, nav, button, form) */
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Molle", cursive;
+  color: #222222;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #499bd2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: #f6d64a;
+  color: #222222;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+header {
+  background-color: #eaeaea;
+  padding: 1rem;
+  text-align: center;
+}
+
+#logo img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+}
+
+#logo {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+header p {
+  font-size: 0.75rem;
+}
+
+nav {
+  background-color: #55bcd5;
+  color: #ffffff;
+}
+
+nav ul {
+  display: none;
+}
+
+nav label {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+nav #toggle:checked ~ label {
+  background-color: #499bd2;
+}
+
+nav #toggle:checked ~ ul {
+  display: block;
+}
+
+nav ul li {
+  padding: 0.75rem;
+  text-align: center;
+  border-top: 1px solid #499bd2;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #499bd2;
+  text-decoration: none;
+}
+
+nav ul li.active a {
+  font-weight: bold;
+}
+
+nav #toggle {
+  display: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+#intro {
+  margin-bottom: 2rem;
+}
+
+#img-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#img-grid img:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+#plan {
+  background-color: #f6d64a;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#plan h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#plan > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#plan section {
+  text-align: center;
+}
+
+#plan section img {
+  width: 50px;
+  height: auto;
+}
+
+#testimonials {
+  background-color: #eaeaea;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#testimonials h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#testimonials > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#testimonials section {
+  text-align: center;
+}
+
+#testimonials section img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+#testimonials section q {
+  font-style: italic;
+}
+
+#about {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#about h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#about > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#about section {
+  text-align: center;
+}
+
+#about section img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+#contact {
+  background-color: #eaeaea;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#contact h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#contact .form-required {
+  font-size: 0.75rem;
+  color: #9b26b0;
+}
+
+#contact .required {
+  color: #9b26b0;
+}
+
+#contact form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#contact #names,
+#contact #nums,
+#contact #selects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#contact #names label,
+#contact #nums label,
+#contact #selects label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+#contact fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contact legend {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+#contact .radio-input {
+  display: flex;
+  align-items: center;
+}
+
+#contact .radio-control {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #222222;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+#contact input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#contact input[type="radio"]:checked + .radio-control::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #9b26b0;
+  border-radius: 50%;
+}
+
+#contact .radio-label {
+  font-size: 0.875rem;
+}
+
+#contact .custom-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#contact select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpath d='M6 6L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.5rem;
+}
+
+#contact select:focus {
+  outline: none;
+  border-color: #9b26b0;
+  box-shadow: 0 0 0 2px rgba(155, 38, 176, 0.25);
+}
+
+#contact .custom-select .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid transparent;
+  border-radius: inherit;
+}
+
+#contact select:focus + .focus {
+  border-color: #9b26b0;
+  box-shadow: 0 0 0 2px rgba(155, 38, 176, 0.25);
+}
+
+#contact input[type="submit"] {
+  background-color: #9b26b0;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+  background-color: #499bd2;
+}
+
+/* ~~~~~~~~~~ FOOTER ~~~~~~~~~~ */
+
+footer {
+  background-color: #222222;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+footer a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 576px) {
+  #img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #plan > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #testimonials > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "names nums"
+      "selects selects"
+      "submit submit";
+  }
+
+  #contact #names {
+    grid-area: names;
+  }
+
+  #contact #nums {
+    grid-area: nums;
+  }
+
+  #contact #selects {
+    grid-area: selects;
+  }
+
+  #contact #mySubmit {
+    grid-area: submit;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav label {
+    display: none;
+  }
+
+  nav ul li {
+    flex: 1;
+    border: none;
+  }
+
+  nav ul li a {
+    padding: 0.75rem;
+  }
+
+  #img-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #img-grid img:nth-child(3) {
+    grid-column: auto;
+  }
+
+  #plan > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #testimonials > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #about > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header div {
+    text-align: left;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "article ."
+  }
+
+  article {
+    grid-area: article;
+  }
+}
